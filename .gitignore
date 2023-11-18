@@ -1,0 +1,15 @@
+*
+
+!*/
+!Makefile
+!*.c
+!*.cc
+!*.cpp
+!*.h
+!*.hex
+!*.sh
+!.gitignore
+!*.png
+!README.md
+build
+
