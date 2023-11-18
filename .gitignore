@@ -10,6 +10,7 @@
 !*.sh
 !.gitignore
 !*.png
+!*.mk
 !README.md
 build
 

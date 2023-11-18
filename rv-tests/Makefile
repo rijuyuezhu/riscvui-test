@@ -5,10 +5,12 @@ TRANSFER = $(BUILD_DIR)/transfer
 .DEFAULT_GOAL = app
 
 $(TRANSFER): scripts/transfer.c
-	$(CC) -o $@ $<
+	@echo + build $(TRANSFER)
+	@$(CC) -o $@ $<
 
 app: $(TRANSFER)
 	@bash scripts/gen.sh
+	@echo BUILD DONE.
 
 clean:
 	@rm -rf $(TRANSFER) $(BUILD_DIR)
