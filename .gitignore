@@ -12,5 +12,6 @@
 !*.png
 !*.mk
 !README.md
+!*.zip
 build
 
