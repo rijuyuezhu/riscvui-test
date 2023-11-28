@@ -2,17 +2,17 @@ $(shell mkdir -p ./build)
 BUILD_DIR = $(abspath ./build)
 TRANSFER = $(BUILD_DIR)/transfer
 
-.DEFAULT_GOAL = app
+.DEFAULT_GOAL = rv-tests-app
 
 $(TRANSFER): scripts/transfer.c
 	@echo + build $(TRANSFER)
 	@$(CC) -o $@ $<
 
-app: $(TRANSFER)
+rv-tests-app: $(TRANSFER)
 	@bash scripts/gen.sh
-	@echo BUILD DONE.
+	@echo === BUILD DONE ===
 
 clean:
 	@rm -rf $(TRANSFER) $(BUILD_DIR)
 
-.PHONY: app clean
+.PHONY: rv-tests-app clean

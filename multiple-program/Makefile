@@ -1,4 +1,4 @@
-SUBMODULES = am-cpu-tests rv-tests single-program multiple-program
+SUBMODULES = $(filter-out . scripts,$(notdir $(shell find . -maxdepth 1 -type d)))
 
 app: $(SUBMODULES)
 
