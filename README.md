@@ -52,9 +52,9 @@ None.
 
 This part allows building user programs with multiple files. 
 
-### prerequisitions
+### Prerequisitions
 
-you need to ensure that the environment variable `$am_home` is the root directory of abstract-machine.
+You need to ensure that the environment variable `$AM_HOME` is the root directory of abstract-machine.
 
 ### Usage
 
