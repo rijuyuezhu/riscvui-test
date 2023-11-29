@@ -1,4 +1,4 @@
-SUBMODULES = am-cpu-tests rv-tests single-program multiple-program
+SUBMODULES = am-cpu-tests rv-tests single-program multiple-program refer-program
 
 app: $(SUBMODULES)
 

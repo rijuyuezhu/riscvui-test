@@ -6,7 +6,7 @@
 
 int main(int argc, char *argv[]) {
   assert(argc == 3);
-  const char *from = argv[1]; // hex
+  const char *from = argv[1]; // binary
   const char *to = argv[2];   // text
 
   FILE *fp = fopen(from, "rb");

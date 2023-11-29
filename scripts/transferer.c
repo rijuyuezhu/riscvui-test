@@ -5,17 +5,21 @@
 #include <stdint.h>
 
 int main(int argc, char *argv[]) {
-  assert(argc == 2);
-  FILE *fr = fopen(argv[1], "r");
+  assert(argc == 3);
+  const char *from = argv[1];
+  const char *to = argv[2];
+
+  FILE *fr = fopen(from, "r");
   assert(fr);
 
-  char *tmp = (char *)malloc(strlen(argv[1]) + 2);
-  strcpy(tmp, argv[1]);
-  char *end = tmp + strlen(tmp);
-  *end = *(end-1); --end;
-  *end = *(end-1); --end;
-  *end = *(end-1); --end;
-  *end = *(end-1); --end;
+  char *tmp = (char *)malloc(sizeof(char) * (strlen(to) + 2));
+  assert(tmp);
+  strcpy(tmp, to);
+  char *end = tmp + strlen(to);
+  *end = *(end-1); end--;
+  *end = *(end-1); end--;
+  *end = *(end-1); end--;
+  *end = *(end-1); end--;
   FILE *fw[4];
   for (int j = 0; j < 4; j++) {
     *end = j + '0';
