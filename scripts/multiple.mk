@@ -14,6 +14,7 @@ $(BIN_FILE): $(SRCS)
 	@echo 'SRCS = $$(shell find src/ -name "*.cc" -or -name "*.cpp" -or -name "*.c" -or -name "*.S")' >> $(AM_ORIGIN_DIR)/Makefile
 	@echo 'include $$(AM_HOME)/Makefile' >> $(AM_ORIGIN_DIR)/Makefile
 	@$(MAKE) -s -C $(AM_ORIGIN_DIR) ARCH=$(AM_ARCHS) image > /dev/null
+	@echo + build $(notdir $@)
 
 app: convert
 

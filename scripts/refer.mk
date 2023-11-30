@@ -8,6 +8,7 @@ include $(ROOT_DIR)/scripts/converter.mk
 
 $(BIN_FILE):
 	$(operation_sequence)
+	@echo + enter $(PROJ_DIR) to build $(notdir $@)
 
 app: convert
 

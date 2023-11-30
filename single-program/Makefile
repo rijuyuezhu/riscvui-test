@@ -14,8 +14,8 @@ include $(ROOT_DIR)/scripts/converter.mk
 
 
 $(BIN_DIR)/%-$(AM_ARCHS).bin: $(SRC_DIR)/%.c
-	@echo + build $(notdir $@)
 	@NAME=$(basename $(notdir $<)) SRCS=src/$(shell realpath $< --relative-to $(SRC_DIR)) $(MAKE) -s -C $(AM_ORIGIN_DIR) ARCH=$(AM_ARCHS) image > /dev/null
+	@echo + build $(notdir $@)
 
 app: convert
 
