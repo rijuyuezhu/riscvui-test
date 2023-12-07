@@ -15,4 +15,4 @@ app: convert
 clean:
 	@-rm -rf $(BUILD_DIR)
 
-.PHONY: clean app
+.PHONY: clean app $(BIN_FILE)
