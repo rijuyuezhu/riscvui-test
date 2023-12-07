@@ -13,8 +13,11 @@ $(error The NAME is not set appropriately)
 endif
 
 endif
-
+ifeq ($(MAKECMDGOALS),run)
+AM_ARCHS         ?= native
+else
 AM_ARCHS         ?= riscv32-riscvui_test
+endif
 BUILD_DIR        ?= $(abspath ./build)
 HEX_DIR           = $(BUILD_DIR)/generate
 BIN_FILE         ?= $(foreach name,$(NAME),$(BUILD_DIR)/am-origin/build/$(name)-$(AM_ARCHS).bin)

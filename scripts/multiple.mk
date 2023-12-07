@@ -18,7 +18,11 @@ $(BIN_FILE): $(SRCS)
 
 app: convert
 
+run: $(BIN_FILE)
+	@echo + run $(basename $(BIN_FILE))
+	@$(basename $(BIN_FILE))
+
 clean:
 	@-rm -rf $(BUILD_DIR)
 
-.PHONY: clean app
+.PHONY: clean app run

@@ -12,7 +12,11 @@ $(BIN_FILE):
 
 app: convert
 
+run: $(BIN_FILE)
+	@echo + run $(basename $(BIN_FILE))
+	@$(basename $(BIN_FILE))
+
 clean:
 	@-rm -rf $(BUILD_DIR)
 
-.PHONY: clean app $(BIN_FILE)
+.PHONY: clean app $(BIN_FILE) run
